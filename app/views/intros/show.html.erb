@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Miku:</strong>
+  <%= @intro.miku %>
+</p>
+
+<p>
+  <strong>Hyogo:</strong>
+  <%= @intro.hyogo %>
+</p>
+
+<%= link_to 'Edit', edit_intro_path(@intro) %> |
+<%= link_to 'Back', intros_path %>

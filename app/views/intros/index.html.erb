@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Intros</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Miku</th>
+      <th>Hyogo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @intros.each do |intro| %>
+      <tr>
+        <td><%= intro.miku %></td>
+        <td><%= intro.hyogo %></td>
+        <td><%= link_to 'Show', intro %></td>
+        <td><%= link_to 'Edit', edit_intro_path(intro) %></td>
+        <td><%= link_to 'Destroy', intro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Intro', new_intro_path %>
